@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hola jaja </h1>
-    <h1>probando para ver si esto sube o no </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Not Routine</title>
+  </head>
+  <body>
+    <div class="linea-borde">
+      <style>
+        /* Oculta el párrafo por defecto */
+        #parrafo {
+          display: none;
+        }
+      </style>
+      <header class="siteHeader" id="SiteHeader">
+        <h1 class="siteHeader_title">
+          <span
+            id="titulo"
+            class="animate__animated animate__fadeIn animate__slow"
+            >F e l i p e . C a b e l l o
+          </span>
+          <br /><span
+            class="animate__animated animate__fadeIn animate__slow"
+            id="subtitulo"
+            >P r o g r a m a d o r & D i s e ñ a d o r</span
+          >
+        </h1>
+
+        <nav class="siteHeader_nav" id="nav">
+          <ol class="animate__animated animate__fadeIn animate__slow">
+            <li class="is-selected">
+              <div id="inicio" class="_dot">
+                ● <a class="_text" href="">_Inicio</a>
+              </div>
+            </li>
+            <li>
+              <div class="_dot">
+                ●
+                <a id="proyectosButton" class="_text" >_Proyectos</a>
+
+              </div>
+            </li>
+            <li>
+              <div class="_dot">● <a class="_text" href="">_Info</a></div>
+            </li>
+            <li>
+              <div class="_dot">
+                ● <a class="_text" href="">_Contacto</a>
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <script src="main.js"></script>
+      </header>
+
+     
+
+      <div class="centered-text">
+        <p
+          id="textToAnimate"
+          class="animate__animated animate__fadeOut animate__slow"
+        >
+          Not Routine
+          <span id="p2" class="animate__animated animate__fadeOut animate__slow"
+            >Portafolio
+          </span>
+        </p>
+
+        <div id="contenedor">
+          <p id="parrafo">
+            Este es el párrafo que se mostrará al hacer clic en el enlace.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="video-container animate__animated animate__fadeIn animate__slow"
+      >
+        <video autoplay muted loop id="video-background">
+          <source src="video/video 01.mp4" type="video/mp4" />
+          <!-- Otros formatos de video (WebM, Ogg) -->
+        </video>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // Espera a que se cargue el documento
+    document.addEventListener("DOMContentLoaded", function () {
+      // Obtén el elemento del video y el encabezado
+      const videoBackground = document.getElementById("video-background");
+      const header = document.getElementById("SiteHeader");
+
+      // Agrega un evento para detectar el final de la animación de fadeIn
+      header.addEventListener("animationend", function () {
+        // Reproduce el video después de que termine la animación
+        videoBackground.play();
+      });
+    });
+  </script>
 </html>

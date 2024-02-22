@@ -1,3 +1,206 @@
-body{
-    background-color: blue;
+@font-face {
+  font-family: "Agency";
+  src: url(font/AgencyFB-Bold.ttf);
+  /* font-weight: bold;
+    font-style: bold; */
 }
+
+@font-face {
+  font-family: "Bebas";
+  src: url(font/BebasNeue-Regular.ttf);
+  /* font-weight: bold;
+    font-style: bold; */
+}
+
+@font-face {
+  font-family: "Raj";
+  src: url(font/Rajdhani-Light.ttf);
+  /* font-weight: bold;
+    font-style: bold; */
+}
+
+@font-face {
+  font-family: "Source";
+  src: url(font/SourceCodePro-VariableFont_wght.ttf);
+  /* font-weight: bold;
+      font-style: bold; */
+}
+
+@font-face {
+  font-family: "Amatics";
+  src: url(font/AmaticSC-Regular.ttf);
+  /* font-weight: bold;
+      font-style: bold; */
+}
+
+@font-face {
+  font-family: "Nanum";
+  src: url(font/NanumMyeongjo-Regular.ttf);
+  /* font-weight: bold;
+      font-style: bold; */
+}
+
+@font-face {
+  font-family: "Renie";
+  src: url(font/ReenieBeanie-Regular.ttf);
+  /* font-weight: bold;
+      font-style: bold; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000; /* Fondo negro */
+}
+
+/* INICIO */
+.centered-text {
+  width: 100%;
+  height: 100vh; /* 100% del alto de la ventana */
+  color: #fff; /* Texto blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Agency";
+  font-size: 30px;
+}
+
+#p2 {
+  font-family: "Bebas";
+  color: grey;
+}
+
+/* Estilos para ocultar el encabezado */
+.siteHeader {
+  display: none;
+}
+
+#nav {
+  padding-top: 200px;
+}
+
+.siteHeader_title {
+  color: white;
+  padding: 43px;
+  font-family: "Nanum";
+  font-size: 30px;
+}
+.siteHeader_label {
+  color: grey;
+  padding-left: 60px;
+  margin-bottom: 200px;
+}
+
+ol li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Source";
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Establece un valor de z-index más bajo para el video */
+  opacity: 0.1; /* Ajusta la opacidad del video (valores entre 0 y 1) */
+}
+
+#video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#textToAnimate {
+  animation-duration: 3s; /* Duración de 3 segundos */
+}
+
+#p2 {
+  animation-duration: 10s; /* Duración de 3 segundos */
+}
+
+#parrafo {
+  display: none;
+}
+
+#contenedor {
+  height: 200px; /* Altura fija del contenedor */
+  overflow: auto; /* Agrega el scroll cuando el contenido es más largo que la altura */
+  padding: 10px; /* Espaciado interno */
+}
+
+#titulo {
+}
+#subtitulo {
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(180, 180, 180);
+}
+
+._text {
+  position: relative;
+  transition-property: opacity, color; /* Agregamos 'color' a las propiedades de transición */
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Color original del texto */
+}
+
+/* Estilo al hacer hover sobre el enlace */
+._text:hover {
+  color: rgb(55, 55, 59); /* Color gris al hacer hover */
+  text-decoration: none; /* Puedes ajustar el estilo de subrayado según tus preferencias */
+}
+
+.project_section {
+  color: white;
+  font-size: 100px;
+}
+
+#proyectosButton {
+  cursor: pointer;
+}
+
+.listado-proyectos {
+  position: fixed;
+  top: 0;
+  right: 300px; /* Inicialmente fuera de la pantalla en el lado derecho */
+  width: 300px;
+  height: 100%;
+  transition: right 0.5s; /* Agrega una transición suave al desplazamiento */
+  /*  background: rgba(0, 0, 0, 0.9); */ /* Fondo con un poco de transparencia */
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centrar el contenido horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.listado-proyectos ul {
+  list-style: none;
+  padding: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.listado-proyectos li {
+  padding: 0px;
+}
+
+/* Clase para mostrar el listado de proyectos */
+.visible {
+  right: 0;
+}
+
+.agregados li{
+  color: white;
+  font-family: "Raj";
+  font-style: bold;
+  margin-left: 100px;
+}
+
